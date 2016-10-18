@@ -1,0 +1,55 @@
+<!--  $Id: ClockssIUMJPlugin.xml,v 1.7 2013/10/03 17:36:59 etenbrink Exp $ -->
+<map>
+  <!-- ClockssIUMJPlugin.xml inherited from IUMJPlugin.xml.
+       The main differences are names, version.
+  -->  
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.iumj.ClockssIUMJPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Indiana University Mathematics Journal Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.iumj.IUMJPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>5</string>
+  </entry>
+<!-- only add version numbers if CLOCKSS version adds different
+     substance/metadata/poll rules
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>3</string>
+      </entry>
+    </map>
+  </entry>
+-->
+  <entry>
+    <string>au_name</string>
+    <string>"Indiana University Mathematics Journal Plugin (CLOCKSS), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+
+</map>

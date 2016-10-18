@@ -1,0 +1,25 @@
+{
+  publisher <
+    name = University of Tampa Press
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  implicit < status ; year ; name ; param[volume] >
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Tampa Review ;
+      issn = 0896-064X ;
+      issnl = 0896-064X
+    >
+
+    param[journal_dir] = tampa_review
+    attr[journal_id] = tar
+
+    au < released ; 2013 ; Tampa Review Volume 45 ; 45 >
+    au < expected ; 2014 ; Tampa Review Volume 46 ; 46 >
+
+  }
+
+}

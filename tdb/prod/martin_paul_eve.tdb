@@ -1,0 +1,40 @@
+{
+
+  publisher <
+    name = Martin Paul Eve
+  >
+
+  {
+    
+     title <
+       name = Alluvium ;
+       issn = 2050-1560
+     >
+     
+      plugin = needs.plugin
+      param[base_url] = http://www.alluvium-journal.org/
+      implicit < status ; year ; param[year] ; name ; volume >
+
+     au < exists ; 2012 ; 2012 ; Alluvium Volume 1 ; 1 >
+     au < expected ; 2013 ; 2013 ; Alluvium Volume 2 ; 2 >
+     au < expected ; 2014 ; 2014 ; Alluvium Volume 3 ; 3 >
+   
+  }
+  {
+  
+    title < 
+      name = Orbit: Writing Around Pynchon ;
+      issn = 2047-2870 
+    >
+     plugin = org.lockss.plugin.ojs2.OJS2Plugin
+     param[base_url] = https://www.pynchon.net/
+     param[journal_id] = owap
+     implicit < status ; year ; param[year] ; name ; volume >
+     
+      au < released ; 2012 ; 2012 ; Orbit: Writing Around Pynchon Volume 1 ; 1 >  
+      au < released ; 2013 ; 2013 ; Orbit: Writing Around Pynchon Volume 2 ; 2 >  
+      au < manifest ; 2014 ; 2014 ; Orbit: Writing Around Pynchon Volume 3 ; 3 >  
+     
+  }
+    
+}

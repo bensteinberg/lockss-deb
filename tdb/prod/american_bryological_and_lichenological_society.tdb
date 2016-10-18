@@ -1,0 +1,57 @@
+{
+
+  publisher <
+    name = American Bryological and Lichenological Society
+  >
+
+  {
+    title <
+      name = The Bryologist ;
+      issn = 0007-2745 ;
+      eissn = 1938-4378 ;
+      issnl = 0007-2745
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0007-2745
+  
+      au < down ; 2004 ; The Bryologist Volume 107 ; 107 >
+
+    }
+    
+    {
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = bryo
+
+      au < doNotProcess ; 2000-2013 ; The Bryologist Issue 1 ; 1 >
+      au < doNotProcess ; 2000-2013 ; The Bryologist Issue 2 ; 2 >
+      au < doNotProcess ; 2000-2013 ; The Bryologist Issue 3 ; 3 >
+      au < doNotProcess ; 2000-2013 ; The Bryologist Issue 4 ; 4 >
+      au < released ; 2000 ; The Bryologist Volume 103 ; 103 >
+      au < released ; 2001 ; The Bryologist Volume 104 ; 104 >
+      au < released ; 2002 ; The Bryologist Volume 105 ; 105 >
+      au < released ; 2003 ; The Bryologist Volume 106 ; 106 >
+      au < doNotProcess ; 2004 ; The Bryologist Volume 107 ; 107 >
+      au < released ; 2005 ; The Bryologist Volume 108 ; 108 >
+      au < released ; 2006 ; The Bryologist Volume 109 ; 109 >
+      au < released ; 2007 ; The Bryologist Volume 110 ; 110 >
+      au < released ; 2008 ; The Bryologist Volume 111 ; 111 >
+      au < released ; 2009 ; The Bryologist Volume 112 ; 112 >
+      au < released ; 2010 ; The Bryologist Volume 113 ; 113 >
+      au < released ; 2011 ; The Bryologist Volume 114 ; 114 >
+      au < released ; 2012 ; The Bryologist Volume 115 ; 115 >
+      au < released ; 2013 ; The Bryologist Volume 116 ; 116 >
+      au < manifest ; 2014 ; The Bryologist Volume 117 ; 117 >
+      
+    }
+
+  }
+
+}
+

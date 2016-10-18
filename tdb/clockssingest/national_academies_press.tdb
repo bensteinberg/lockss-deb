@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = National Academies Press ;
+    info[contract] = 2013 ;
+    info[tester] = S
+  >
+  
+  
+  {
+  
+    title <
+      name = National Academies Press Books Source Content
+    >
+    
+    plugin = org.lockss.plugin.clockss.nap.ClockssNAPBooksSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/nap-released/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < readySource ; crawling ; 2014 ; National Academies Press Books Source Content 2014 ; 2014 >
+
+  }
+
+}

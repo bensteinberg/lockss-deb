@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Liverpool University Press
+  >
+  
+  {
+  
+    title <
+      name = Translated Texts for Historians ;
+      type = bookSeries
+    >
+
+    comment[moving] = from MetaPress to Atypon
+    comment[platform2] = params for journal are journal_issn and volume_name
+    
+    plugin = needs.plugin
+    param[base_url] = 
+    implicit < status ; year ; isbn ; name >
+
+    au < doNotProcess ; 2004 ; 9780853230397 ; The Acts of the Council of Chalcedon >
+    
+  }
+
+}

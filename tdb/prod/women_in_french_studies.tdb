@@ -1,0 +1,34 @@
+
+
+{
+  publisher <
+    name = Women in French Studies
+  >
+
+  implicit < status ; year; name ; param[volume] >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+
+  {
+    title <
+      name = Women in French Studies ;
+      issn = 1077-825X ;
+      eissn = 2166-5486
+      
+    >
+
+    param[journal_dir] = women_in_french_studies
+    attr[journal_id] = wfs
+    
+    comment[v18] = malformed manifest page. No content.
+
+    au < doNotProcess ; 2010 ; Women in French Studies Volume 18 ; 18 >
+    au < released ; 2011 ; Women in French Studies Volume 19 ; 19 >
+    au < released ; 2012 ; Women in French Studies Volume 20 ; 20 >
+    au < released ; 2013 ; Women in French Studies Volume 21 ; 21 >
+    au < expected ; 2014 ; Women in French Studies Volume 22 ; 22 >
+
+  }
+
+}

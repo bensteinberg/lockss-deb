@@ -1,0 +1,187 @@
+ <!--  $Id: PensoftPlugin.xml,v 1.16 2014/07/29 02:41:50 mellen22 Exp $-->
+ <map>
+  <entry>
+    <string>plugin_status</string>
+    <string>deprecated</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.pensoft.PensoftPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Pensoft Plugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>11</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>9</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>4</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <!-- need 1.63.3 to work with CC license 4.0 -->
+    <string>1.63.3</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Pensoft Publishers Plugin, Base URL %s, Journal %s, Year %d", base_url, journal_name, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <!--<string>"%sjournals/%s/issue/%s/", base_url, journal_name, issue_set</string>-->
+    <string>"%sjournals/%s/archive?year=%d", base_url, journal_name, year</string>
+  </entry>
+  <!--
+  <entry>
+    <string>au_permission_url</string>
+    <string> "%s", base_url</string>
+  </entry>
+  -->
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%sjournals/%s", base_url, journal_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%sjournals/%s", base_url, journal_name</string>
+      </entry>
+    </map>
+  </entry>
+<!-- 
+    this:           http://www.pensoft.net/journals/neobiota/issue/11/
+    redirecting to: http://www.pensoft.net/journals/neobiota/journals/neobiota/issue/11/
+    The above looks to have been fixed! 1/22/2014
+    example of pdfs: 
+      http://www.pensoft.net/inc/journals/download.php?fileId=3070&fileTable=J_GALLEYS 
+      http://www.pensoft.net/J_FILES/10/articles/1100/1100-G-3-layout.pdf
+    examples of abstract|article: 
+      http://www.pensoft.net/journals/compcytogen/article/1141/abstract/cytogenetic-characterization-of-three-balistoidea-fish-species-from-the-atlantic-with-inferences-on-chromosomal-evolutio 
+      http://www.pensoft.net/journals/compcytogen/article/1730
+    example of jpg: 
+      http://www.pensoft.net/J_FILES/1317222993JHR-22-cover-temp-110.jpg
+    example of citation:
+      http://www.pensoft.net/journals/subtbiol/article/2518/citation/world-karst-science-reviews
+      http://www.pensoft.net/inc/journals/ris.php?articleId=2518&type=ris&journalId=13
+-->  
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <!--http://www.pensoft.net/journals/neobiota/issue/11/ -->
+      <!-- <string>1,"^%sjournals/%s/journals/%s/issue/.*", base_url, journal_name, journal_name</string> -->
+      <string>1,"^%sjournals/%s/issue/.*", base_url, journal_name</string>
+      <!-- the following remove extraneous citation (we keep the type=ris) -->
+      <string>2, "^%sinc/journals/ris.php?.*type=(bib|txt).*", base_url</string>
+      <!-- removing non-essential stuff from the right column -->
+      <string>2, "^%sjournal_home.*", base_url</string>
+      <string>2, "^%s[e_]?books_.*", base_url</string>
+      <string>1,"^%sinc/journals/", base_url</string> 
+      <string>1,"^%sjournals/%s/article/", base_url, journal_name</string>
+      <string>1, "^%sJ_FILES/", base_url</string>
+      <string>4,"^%s", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <!-- pdf example: 
+      http://www.pensoft.net/inc/journals/download.php?fileTable=J_GALLEYS&fileId=2297
+      -->
+      <string>"^%sinc/journals/download.php\?fileId=[\d]+&amp;fileTable=J_GALLEYS", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>       
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_name</key>
+        <displayName>Journal Name</displayName>
+        <type>1</type>
+        <size>30</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>   
+      <!--   
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_set</key>
+        <displayName>Issue Set</displayName>
+        <description>A comma delimited list of issues with optional numeric range. (eg issue1, issue2[, {min-max}]*)</description>
+        <type>9</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>   
+      --> 
+    </list>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftArticleIteratorFactory</string>
+  </entry>  
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.pensoft.PensoftHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*</string>
+        <string>org.lockss.plugin.pensoft.PensoftHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.pensoft.PensoftUrlNormalizer</string>
+  </entry>
+</map>

@@ -1,0 +1,57 @@
+{
+
+  publisher <
+    name = Society of Ethnobiology
+  >
+
+    plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+    implicit < status ; year ; name ; param[volume_name] >
+    param[base_url] = http://www.bioone.org/
+
+  {
+
+    title <
+      name = Ethnobiology Letters ;
+      issn = 2159-8126 ;
+      issnl = 2159-8126
+    >
+
+    param[journal_id] = ebl
+    
+    au < exists ; 2010 ; Ethnobiology Letters Volume 1 ; 1 >
+    au < exists ; 2011 ; Ethnobiology Letters Volume 2 ; 2 >
+    au < exists ; 2012 ; Ethnobiology Letters Volume 3 ; 3 >
+    au < exists ; 2013 ; Ethnobiology Letters Volume 4 ; 4 >
+    au < exists ; 2014 ; Ethnobiology Letters Volume 5 ; 5 >
+ 
+
+  }
+
+  {
+
+    title <
+      name = Journal of Ethnobiology ;
+      issn = 0278-0771 ;
+      issnl = 0278-0771
+    >
+
+    param[journal_id] = etbi
+    
+    comment[v33] = not ready html error 500 http://www.bioone.org/action/showFullPopup?doi=10.2993%2F0278-0771-33.1.168&id=i0278-0771-32-2-185-f01    
+
+    au < released ; 2005 ; Journal of Ethnobiology Volume 25 ; 25 >
+    au < released ; 2006 ; Journal of Ethnobiology Volume 26 ; 26 >
+    au < released ; 2007 ; Journal of Ethnobiology Volume 27 ; 27 >
+    au < released ; 2008 ; Journal of Ethnobiology Volume 28 ; 28 >
+    au < released ; 2009 ; Journal of Ethnobiology Volume 29 ; 29 >
+    au < released ; 2010 ; Journal of Ethnobiology Volume 30 ; 30 >
+    au < released ; 2011 ; Journal of Ethnobiology Volume 31 ; 31 >
+    au < released ; 2012 ; Journal of Ethnobiology Volume 32 ; 32 >
+    au < doNotProcess ; 2013 ; Journal of Ethnobiology Volume 33 ; 33 >
+    au < manifest ; 2014 ; Journal of Ethnobiology Volume 34 ; 34 >
+ 
+
+  }
+
+}
+

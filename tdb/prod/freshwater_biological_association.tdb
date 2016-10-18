@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Freshwater Biological Association
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+  
+    title <
+      name = Freshwater Reviews ;
+      issn = 1755-084X ;
+      issnl = 1755-084X
+    >
+    
+    param[journal_id] = frer
+
+    au < released ; 2008 ; Freshwater Reviews Volume 1 ; 1 >
+    au < released ; 2009 ; Freshwater Reviews Volume 2 ; 2 >
+    au < released ; 2010 ; Freshwater Reviews Volume 3 ; 3 >
+    au < released ; 2011 ; Freshwater Reviews Volume 4 ; 4 >
+    au < released ; 2012 ; Freshwater Reviews Volume 5 ; 5 >
+    au < released ; 2013 ; Freshwater Reviews Volume 6 ; 6 >
+    au < manifest ; 2014 ; Freshwater Reviews Volume 7 ; 7 >
+ 
+  }
+  
+}

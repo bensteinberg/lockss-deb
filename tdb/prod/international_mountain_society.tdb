@@ -1,0 +1,53 @@
+{
+
+  publisher <
+    name = International Mountain Society
+  >
+
+  {
+    title <
+      name = Mountain Research and Development ;
+      issn = 0276-4741 ;
+      eissn = 1994-7151 ;
+      issnl = 0276-4741
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0276-4741
+  
+      comment[AUs048] = 024 was tested and released normally, accidentally deleted and reinstated.
+      au < down ; 2004 ; Mountain Research and Development Volume 024 ; 024 >
+      
+    }
+
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = mred
+  
+      au < released ; 2000 ; Mountain Research and Development Volume 20 ; 20 >
+      au < released ; 2001 ; Mountain Research and Development Volume 21 ; 21 >
+      au < released ; 2002 ; Mountain Research and Development Volume 22 ; 22 >
+      au < released ; 2003 ; Mountain Research and Development Volume 23 ; 23 >
+      au < released ; 2004 ; Mountain Research and Development Volume 24 ; 24 >
+      au < released ; 2005 ; Mountain Research and Development Volume 25 ; 25 >
+      au < released ; 2006 ; Mountain Research and Development Volume 26 ; 26 >
+      au < released ; 2007 ; Mountain Research and Development Volume 27 ; 27 >
+      au < released ; 2008 ; Mountain Research and Development Volume 28 ; 28 >
+      au < released ; 2009 ; Mountain Research and Development Volume 29 ; 29 >
+      au < released ; 2010 ; Mountain Research and Development Volume 30 ; 30 >
+      au < released ; 2011 ; Mountain Research and Development Volume 31 ; 31 >
+      au < released ; 2012 ; Mountain Research and Development Volume 32 ; 32 >
+      au < released ; 2013 ; Mountain Research and Development Volume 33 ; 33 >
+      au < manifest ; 2014 ; Mountain Research and Development Volume 34 ; 34 >
+      
+    }
+
+  }
+
+}
+

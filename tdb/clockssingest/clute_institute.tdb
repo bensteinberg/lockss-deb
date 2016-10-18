@@ -1,0 +1,12 @@
+{
+
+  publisher <
+    name = Clute Institute ;
+    info[contract] = 2014 ;
+    info[tester] = 0 ;
+    comment[1] = do not process
+    >
+
+    plugin = needs.plugin
+
+}

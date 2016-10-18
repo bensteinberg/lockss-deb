@@ -1,0 +1,17 @@
+.classpath
+.depend
+.project
+.pydevproject
+.settings
+bin
+classes
+derby.log
+export
+instrumented
+javadoc
+jcoverage.ser
+plugin-tool-log.txt
+rpt-test-err
+rpt-test-out
+tempbuild
+tmplib

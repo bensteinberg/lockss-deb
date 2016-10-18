@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Eagle Hill Foundation
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Journal of the North Atlantic ;
+      eissn = 1935-1933
+    >
+    
+    param[journal_id] = noat
+    
+    au < released ; 2008 ; Journal of the North Atlantic Volume 1 ; 1 >
+    au < released ; 2009 ; Journal of the North Atlantic Volume 2 ; 2 >
+    au < released ; 2010 ; Journal of the North Atlantic Volume 3 ; 3 >
+
+  }
+  
+}

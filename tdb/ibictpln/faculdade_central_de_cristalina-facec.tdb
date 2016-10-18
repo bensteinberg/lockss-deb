@@ -1,0 +1,87 @@
+{
+  publisher <
+    name = Faculdade Central de Cristalina-FACEC
+  >
+
+    plugin = org.lockss.plugin.ojs2.OJS2Plugin
+    implicit < status ; year ; volume ; name ; param[year] ; comment[error] >
+    
+    comment[down] = university website down. http://www.facec.edu.br/seer/
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Administração ;
+        issn = 1984-5294
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina-FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = docenciaepesquisaemadministracao
+
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Administração Volume 1 ; 2009 ; website offline >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física ;
+        issn = 2175-8093
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina-FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = docenciaepesquisaeducacaofisica
+
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 1 ; 2009 ; website offline >
+      au < notReady ; 2010 ; 2 ; Revista Brasileira de Docência, Ensino e Pesquisa em Educação Física Volume 2 ; 2010 ; website offline >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem ;
+        issn = 2175-5736
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina-FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = enfermagem
+
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Enfermagem Volume 1 ; 2009 ; website offline >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Docência, Ensino e Pesquisa em Turismo ;
+        issn = 1984-5952
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina-FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = docenciaensinoepesquisaemturismo
+
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Docência, Ensino e Pesquisa em Turismo Volume 1 ; 2009 ; website offline >
+
+  }
+
+  {
+
+      title <
+        name = Revista Brasileira de Formação de Professores ;
+        issn = 1984-5332
+      >
+
+      comment[publisher] = Faculdade Central de Cristalina-FACEC
+      param[base_url] = http://www.facec.edu.br/seer/
+      param[journal_id] = formacaodeprofessores
+
+      au < notReady ; 2009 ; 1 ; Revista Brasileira de Formação de Professores Volume 1 ; 2009 ; website offline >
+
+  }
+
+}

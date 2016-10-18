@@ -1,0 +1,111 @@
+{
+
+  publisher <
+    name = American Ornithologists' Union
+  >
+
+  {
+  
+    title <
+      name = Ornithological Monographs ;
+      issn = 0078-6594 ;
+      eissn = 1941-2282 ;
+      issnl = 0078-6594 
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0078-6594
+  
+      au < down ; 2006 ; Ornithological Monographs Volume 60 ; 60 >
+      au < down ; 2006 ; Ornithological Monographs Volume 61 ; 61 >
+      au < down ; 2007 ; Ornithological Monographs Volume 62 ; 62 >
+      au < down ; 2007 ; Ornithological Monographs Volume 63 ; 63 >
+      
+    }
+
+    {
+ 
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = aoum  
+      comment[exists] = waiting for Atypon book support 5321
+      
+      au < doNotProcess ; 2006 ; Ornithological Monographs Volume 60 ; 60 >
+      au < doNotProcess ; 2006 ; Ornithological Monographs Volume 61 ; 61 >
+      au < doNotProcess ; 2007 ; Ornithological Monographs Volume 62 ; 62 >
+      au < doNotProcess ; 2007 ; Ornithological Monographs Volume 63 ; 63 >
+      au < exists ; 2007 ; Ornithological Monographs Volume 64 ; 64 >
+      au < exists ; 2008 ; Ornithological Monographs Volume 65 ; 65 >
+      au < exists ; 2009 ; Ornithological Monographs Volume 66 ; 66 >
+      au < exists ; 2010 ; Ornithological Monographs Volume 67 ; 67 >
+      au < exists ; 2010 ; Ornithological Monographs Volume 68 ; 68 >
+      au < exists ; 2010 ; Ornithological Monographs Volume 69 ; 69 >
+      au < exists ; 2011 ; Ornithological Monographs Volume 70 ; 70 >
+      au < exists ; 2011 ; Ornithological Monographs Volume 71 ; 71 >
+      au < exists ; 2011 ; Ornithological Monographs Volume 72 ; 72 >
+      au < exists ; 2012 ; Ornithological Monographs Volume 73 ; 73 >
+      au < expected ; 2013 ; Ornithological Monographs Volume 74 ; 74 >
+      au < expected ; 2014 ; Ornithological Monographs Volume 75 ; 75 >
+ 
+     }
+      
+  }
+  
+  {
+  
+    title <
+      name = The Auk: A Quarterly Journal of Ornithology ;
+      issn = 0004-8038 ;
+      eissn = 1938-4254 ;
+      issnl = 0004-8038
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0004-8038
+  
+      au < down ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 [BioOne] ; 117 >
+      au < down ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 [BioOne] ; 118 >
+      au < down ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 [BioOne] ; 119 >
+      au < down ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 [BioOne] ; 120 >
+      au < down ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 [BioOne] ; 121 >
+      au < down ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 [BioOne] ; 122 >
+      au < down ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 [BioOne] ; 123 >
+      au < down ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 [BioOne] ; 124 >
+    }
+
+    {
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = tauk
+      
+      au < doNotProcess ; 2000 ; The Auk: A Quarterly Journal of Ornithology Volume 117 [BioOne] ; 117 >
+      au < doNotProcess ; 2001 ; The Auk: A Quarterly Journal of Ornithology Volume 118 [BioOne] ; 118 >
+      au < doNotProcess ; 2002 ; The Auk: A Quarterly Journal of Ornithology Volume 119 [BioOne] ; 119 >
+      au < doNotProcess ; 2003 ; The Auk: A Quarterly Journal of Ornithology Volume 120 [BioOne] ; 120 >
+      au < doNotProcess ; 2004 ; The Auk: A Quarterly Journal of Ornithology Volume 121 [BioOne] ; 121 >
+      au < doNotProcess ; 2005 ; The Auk: A Quarterly Journal of Ornithology Volume 122 [BioOne] ; 122 >
+      au < doNotProcess ; 2006 ; The Auk: A Quarterly Journal of Ornithology Volume 123 [BioOne] ; 123 >
+      au < doNotProcess ; 2007 ; The Auk: A Quarterly Journal of Ornithology Volume 124 [BioOne] ; 124 > 
+      au < released ; 2008 ; The Auk: A Quarterly Journal of Ornithology Volume 125 [BioOne] ; 125 >
+      au < released ; 2009 ; The Auk: A Quarterly Journal of Ornithology Volume 126 [BioOne] ; 126 >
+      au < released ; 2010 ; The Auk: A Quarterly Journal of Ornithology Volume 127 [BioOne] ; 127 >
+      au < released ; 2011 ; The Auk: A Quarterly Journal of Ornithology Volume 128 [BioOne] ; 128 >
+      au < released ; 2012 ; The Auk: A Quarterly Journal of Ornithology Volume 129 [BioOne] ; 129 >
+      au < released ; 2013 ; The Auk: A Quarterly Journal of Ornithology Volume 130 [BioOne] ; 130 >
+      au < manifest ; 2014 ; The Auk: A Quarterly Journal of Ornithology Volume 131 [BioOne] ; 131 >
+
+    }
+
+  }
+
+}
+

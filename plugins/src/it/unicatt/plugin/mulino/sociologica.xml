@@ -1,0 +1,86 @@
+<map>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>issue_set</key>
+        <displayName>Issue Set</displayName>
+        <description>A comma delimited list of issues. (eg issue1, issue2)</description>
+        <type>9</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>journal_issn</key>
+        <displayName>Journal ISSN</displayName>
+        <description>International Standard Serial Number.</description>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>year</key>
+        <displayName>Year</displayName>
+        <description>Four digit year (e.g., 2004)</description>
+        <type>4</type>
+        <size>4</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>&quot;MULINO - Sociologica - Anno: %d&quot;, year</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>&quot;%s/lockss/%s/ManifestPage.html&quot;, base_url, journal_issn</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>MULINO - Sociologica</string>
+  </entry>
+  <entry>
+    <string>plugin_notes</string>
+    <string>MULINO - Sociologica
+ISSN: 1971-8853
+BASE_URL http://www.rivisteweb.it
+MANIFESTPAGE http://www.rivisteweb.it/lockss/1971-8853/ManifestPage.html
+
+</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>it.unicatt.plugin.mulino.sociologica</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,&quot;%s/lockss/%s/ManifestPage\.html&quot;, base_url, journal_issn</string>
+      <string>1,&quot;%s/nav/issue/%s&quot;, base_url, issue_set</string>
+      <string>1,&quot;%s/nav/issn/%s&quot;, base_url, journal_issn</string>
+      <string>1,&quot;^%s/download/article/10\.2383/&quot;, base_url</string>
+      <string>2,&quot;^%s&quot;, base_url</string>
+    </list>
+  </entry>
+</map>

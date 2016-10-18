@@ -1,0 +1,34 @@
+{
+
+  publisher <
+    name = American Malacological Society
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ;  name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = American Malacological Bulletin ;
+      issn = 0740-2783 ;
+      issnl = 0740-2783
+    >
+    
+    param[journal_id] = malb
+  
+    au < released ; 2007 ; American Malacological Bulletin Volume 22 ; 22 >
+    au < released ; 2007 ; American Malacological Bulletin Volume 23 ; 23 >
+    au < released ; 2008 ; American Malacological Bulletin Volume 24 ; 24 >
+    au < released ; 2008 ; American Malacological Bulletin Volume 25 ; 25 >
+    au < released ; 2008 ; American Malacological Bulletin Volume 26 ; 26 >
+    au < released ; 2009 ; American Malacological Bulletin Volume 27 ; 27 >
+    au < released ; 2010 ; American Malacological Bulletin Volume 28 ; 28 >
+    au < released ; 2011 ; American Malacological Bulletin Volume 29 ; 29 >
+    au < released ; 2012 ; American Malacological Bulletin Volume 30 ; 30 >
+    au < released ; 2013 ; American Malacological Bulletin Volume 31 ; 31 >
+    au < manifest ; 2014 ; American Malacological Bulletin Volume 32 ; 32 >
+
+  }
+  
+}

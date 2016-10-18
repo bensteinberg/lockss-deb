@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Pacific University ;
+    info[contract] = 2011 ;
+    info[tester] = 5
+  >
+  
+  comment[0] = Do not add any titles with the DigitalCommons/BePress Plugin without Vicky's approval. Document Vicky's approval in PD-36.
+
+  {
+  
+    title < 
+      name = Health and Interprofessional Practice ;
+      issn = 2159-1253 
+    >
+    
+    plugin = org.lockss.plugin.bepress.ClockssBerkeleyElectronicPressPlugin
+    param[base_url] = http://commons.pacificu.edu/
+    param[journal_abbr] = hip
+    implicit < status ; status2 ; year ; name ; param[volume] >
+    
+    comment[moved] = journal no longer eligible for clockss inclusion. No manifest pages.
+
+    au < down ; crawling ; 2011-2013 ; Health and Interprofessional Practice Volume 1 ; 1 >
+    au < down ; exists ; 2013-2014 ; Health and Interprofessional Practice Volume 2 ; 2 >
+    
+  }
+
+}

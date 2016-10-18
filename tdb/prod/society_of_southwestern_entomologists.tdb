@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Society of Southwestern Entomologists
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Southwestern Entomologist ;
+      issn = 0147-1724 ;
+      issnl = 0147-1724
+    >
+    
+    param[journal_id] = swen
+  
+    au < released ; 2007 ; Southwestern Entomologist Volume 32 ; 32 >
+    au < released ; 2008 ; Southwestern Entomologist Volume 33 ; 33 >
+    au < released ; 2009 ; Southwestern Entomologist Volume 34 ; 34 >
+    au < released ; 2010 ; Southwestern Entomologist Volume 35 ; 35 >
+    au < released ; 2011 ; Southwestern Entomologist Volume 36 ; 36 >
+    au < released ; 2012 ; Southwestern Entomologist Volume 37 ; 37 >
+    au < released ; 2013 ; Southwestern Entomologist Volume 38 ; 38 >
+    au < manifest ; 2014 ; Southwestern Entomologist Volume 39 ; 39 >
+
+  }
+  
+}

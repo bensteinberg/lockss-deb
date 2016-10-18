@@ -1,0 +1,35 @@
+{
+
+  publisher <
+    name = Commonwealth Forestry Association
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+  
+    title <
+      name = International Forestry Review ;
+      issn = 1465-5489 ;
+      issnl = 1465-5489
+    >
+    
+    param[journal_id] = ifre
+    
+    au < released ; 2004 ; International Forestry Review Volume 6 ; 6 >
+    au < released ; 2005 ; International Forestry Review Volume 7  ; 7 >
+    au < released ; 2006 ; International Forestry Review Volume 8  ; 8 >
+    au < released ; 2007 ; International Forestry Review Volume 9  ; 9 >
+    au < released ; 2008 ; International Forestry Review Volume 10 ; 10 >
+    au < released ; 2009 ; International Forestry Review Volume 11 ; 11 >
+    au < released ; 2010 ; International Forestry Review Volume 12 ; 12 >
+    au < released ; 2011 ; International Forestry Review Volume 13 ; 13 >
+    au < released ; 2012 ; International Forestry Review Volume 14 ; 14 >
+    au < released ; 2013 ; International Forestry Review Volume 15 ; 15 >
+    au < manifest ; 2014 ; International Forestry Review Volume 16 ; 16 >
+
+  }
+  
+}

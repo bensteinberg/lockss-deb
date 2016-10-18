@@ -1,0 +1,30 @@
+{
+
+  publisher <
+    name = Global Alliance Against Traffic in Women ;
+    info[contract] = 2013 ;
+    info[tester] = 4
+  >
+  
+     plugin = org.lockss.plugin.ojs2.ClockssOJS2Plugin
+     implicit < status ; status2 ; year ; name ; volume ; param[year] >
+
+ 
+  {
+  
+    title < 
+      name = Anti-Trafficking Review ;
+      issn = 2286-7511 ;
+      eissn = 2287-0113
+    >
+      
+      param[base_url] = http://www.antitraffickingreview.org/
+      param[journal_id] = atrjournal
+      
+      au < crawling ; exists ; 2013 ; Anti-Trafficking Review Number 1 ; 1 ; 2013 >
+      au < crawling ; exists ; 2014 ; Anti-Trafficking Review Number 2 ; 2 ; 2014 >
+      au < expected ; exists ; 2015 ; Anti-Trafficking Review Number 3 ; 3 ; 2015 >
+
+    }
+
+}

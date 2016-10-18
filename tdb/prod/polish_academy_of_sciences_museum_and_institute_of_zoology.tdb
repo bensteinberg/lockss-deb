@@ -1,0 +1,36 @@
+{
+
+  publisher <
+    name = Polish Academy of Sciences Museum and Institute of Zoology
+  >
+
+  {
+    title <
+      name = Acta Chiropterologica ;
+      issn = 1508-1109 ;
+      eissn = 1733-5329 ;
+      issnl = 1508-1109
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = acta
+  
+      au < released ; 2005 ; Acta Chiropterologica Volume 7 ; 7 >
+      au < released ; 2006 ; Acta Chiropterologica Volume 8 ; 8 >
+      au < released ; 2007 ; Acta Chiropterologica Volume 9 ; 9 >
+      au < released ; 2008 ; Acta Chiropterologica Volume 10 ; 10 >
+      au < released ; 2009 ; Acta Chiropterologica Volume 11 ; 11 >
+      au < released ; 2010 ; Acta Chiropterologica Volume 12 ; 12 >
+      au < released ; 2011 ; Acta Chiropterologica Volume 13 ; 13 >
+      au < released ; 2012 ; Acta Chiropterologica Volume 14 ; 14 >
+      au < released ; 2013 ; Acta Chiropterologica Volume 15 ; 15 >
+      au < manifest ; 2014 ; Acta Chiropterologica Volume 16 ; 16 >
+    }
+
+  }
+
+}
+

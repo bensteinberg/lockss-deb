@@ -1,0 +1,73 @@
+{
+
+  publisher <
+    name = Cortland Review
+  >
+
+  {
+
+    title <
+      name = Cortland Review ;
+      eissn = 1524-6744 ;
+      issnl = 1524-6744
+    >
+
+    rights = openaccess
+
+    comment[cr] = site is redesigned according to http://www.cortlandreview.com/archive.php
+
+    {
+
+      plugin = edu.wisc.library.plugin.CortlandReview98Plugin
+      param[base_url] = http://www.cortlandreview.com/
+      implicit < status ; year ; name >
+
+      au < doNotProcess ; 1998 ; Cortland Review 1998 >
+
+    }
+
+    {
+
+      plugin = edu.wisc.library.plugin.CortlandReview99Plugin
+      param[base_url] = http://www.cortlandreview.com/
+      implicit < status ; year ; name >
+
+      au < doNotProcess ; 1999 ; Cortland Review 1999 >
+
+    }
+
+    {
+
+      plugin = edu.wisc.library.plugin.CortlandReview00Plugin
+      param[base_url] = http://www.cortlandreview.com/
+      implicit < status ; year ; name >
+
+      au < doNotProcess ; 2000 ; Cortland Review 2000 >
+
+    }
+
+    {
+
+      plugin = edu.wisc.library.plugin.CortlandReviewPlugin
+      param[base_url] = http://www.cortlandreview.com/
+      implicit < status ; name ; param[year] ; param[num_issue_range] >
+
+      au < doNotProcess ; Cortland Review 2001 ; 2001 ; 15-18 >
+      au < doNotProcess ; Cortland Review 2002 ; 2002 ; 19-21 >
+      au < down ; Cortland Review 2003 ; 2003 ; 22-24 >
+      au < doNotProcess ; Cortland Review 2004 ; 2004 ; 25-26 >
+      au < doNotProcess ; Cortland Review 2005 ; 2005 ; 27-30 >
+      au < doNotProcess ; Cortland Review 2006 ; 2006 ; 31-33 >
+      au < doNotProcess ; Cortland Review 2007 ; 2007 ; 34-37 >
+      au < doNotProcess ; Cortland Review 2008 ; 2008 ; 38-41 >
+      au < doNotProcess ; Cortland Review 2009 ; 2009 ; 42-45 >
+      au < doNotProcess ; Cortland Review 2010 ; 2010 ; 46-49 >
+      au < doNotProcess ; Cortland Review 2011 ; 2011 ; 50-53 >
+      au < doNotProcess ; Cortland Review 2012 ; 2012 ; 54-58 >
+      au < doNotProcess ; Cortland Review 2013 ; 2013 ; 59-61 >
+
+    }
+
+  }
+
+}

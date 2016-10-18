@@ -1,0 +1,37 @@
+{
+
+  publisher <
+    name = New England Botanical Club
+  >
+
+  {
+    title <
+      name = Rhodora ;
+      issn = 0035-4902 ;
+      eissn = 1938-3401 ;
+      issnl = 0035-4902
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = rhod
+  
+      au < released ; 2005 ; Rhodora Volume 107 ; 107 >
+      au < released ; 2006 ; Rhodora Volume 108 ; 108 >
+      au < released ; 2007 ; Rhodora Volume 109 ; 109 >
+      au < released ; 2008 ; Rhodora Volume 110 ; 110 >
+      au < released ; 2009 ; Rhodora Volume 111 ; 111 >
+      au < released ; 2010 ; Rhodora Volume 112 ; 112 >
+      au < released ; 2011 ; Rhodora Volume 113 ; 113 >
+      au < released ; 2012 ; Rhodora Volume 114 ; 114 >
+      au < released ; 2013 ; Rhodora Volume 115 ; 115 >
+      au < manifest ; 2014 ; Rhodora Volume 116 ; 116 >
+
+    }
+
+  }
+
+}
+

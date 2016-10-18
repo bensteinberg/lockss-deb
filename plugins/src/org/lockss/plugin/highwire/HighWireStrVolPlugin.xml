@@ -1,0 +1,187 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>deprecated</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.HighWireStrVolPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire Press Plugin (H10b)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>100</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>5</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>10</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.60.0</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"HighWire Press Plugin (H10b), Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%slockss-manifest/vol_%s_manifest.dtl", base_url, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%scontent/vol%s/issue%s", base_url, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf</string>
+            <string>"%scgi/reprint/%s/%s/%s", base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>html;*</string>
+            <string>"%s/cgi/content/full/%s/%s/%s", base_url, volume_name, issue, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>1,"^https?://%s/[^?]+\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>4,"^%s", base_url</string>
+      <string>2,"^%s.*/search[.]dtl", base_url</string>
+      <string>1,"^%scontent/vol%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(content|content-nw|issue_pdf)/[^/]+/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(data|eletters|entire_issue_pdf|framedreprint|issue_pdf|pdftoc|reprint|reprintds|reprintframed|reprintframedds|reprintsidebar|screenpdf|video|video_dl)/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(?:lookup|spanish_pdf/)", base_url</string>
+      <string>1,"^%s(this_week)/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>1,"^%scgi/(content/full|data)/[^/]+/DC[0-9]*", base_url</string>
+      <string>1,"^%scontent/vol[^/]+/issue[^/]+/images/data/([^/]+/)?DC[0-9]*", base_url</string>
+      <string>1,"^%sarticletopbar\.dtl", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>404=org.lockss.plugin.highwire.HighWirePressHttpResponseHandler</string>
+      <string>500=org.lockss.plugin.highwire.HighWirePressHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.HighWireLoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/javascript_link_rewriter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireJavaScriptLinkRewriterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.highwire.HighWireHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:HighWire</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scgi/content/full/([^/]+;)?%s/", base_url, volume_name</string>
+      <string>"^%scgi/reprint/([^/]+;)?%s/", base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/3000</string>
+      </entry>
+    </map>
+  </entry>
+</map>

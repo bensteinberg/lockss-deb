@@ -1,0 +1,137 @@
+ <map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>4</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Poll</string>
+        <string>4</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>1</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>1</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.62.0</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Project Muse Books Plugin, Base URL %s, EISBN %s", base_url, eisbn</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Project Muse Books Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!-- link based on volumes that is in css 
+    http://muse.jhu.edu/about/reference/eliot/images/volume_1_overlay.gif -->
+    <list>
+      <string>2,"%sabout/reference/\.*", base_url</string>
+      <string>1,&quot;^https?://%s/[^?]*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$&quot;, base_url_host</string>
+      <string>1,"%sbooks/%s\.*", base_url, eisbn</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_permission_url</string>
+    <string>"%sbooks/lockss_books.html", base_url</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sbooks/%s", base_url, eisbn</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"%sbooks/%s/%s-[\d]+.pdf", base_url, eisbn, eisbn</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+    <entry>
+      <string>au_title</string>
+      <string>"%sbooks/%s", base_url, eisbn</string>
+    </entry>
+    <entry>
+      <string>au_volume</string>
+      <string>"%sbooks/%s", base_url, eisbn</string>
+    </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>eisbn</key>
+        <displayName>eISBN13</displayName>
+        <description>electronic ISBN 13</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
+  </entry> 
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksArticleIteratorFactory</string>
+  </entry>
+  <!--<entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.projmuse.ProjectMuseBooksHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>-->
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.projmuse.ProjectMuseBooksUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.projmuse.ProjectMusePdfFilterFactory</string>
+  </entry>
+</map>

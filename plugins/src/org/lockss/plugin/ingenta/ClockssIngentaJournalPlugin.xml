@@ -1,0 +1,69 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.ingenta.ClockssIngentaJournalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>52</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.ingenta.IngentaJournalPlugin</string>
+  </entry>
+   <entry>
+    <string>plugin_parent_version</string>
+    <string>52</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Ingenta Journal Plugin (CLOCKSS), Base URL %s, API URL %s, Graphics URL %s, Publisher ID %s, Journal ID %s, Journal ISSN %s, Volume %s", base_url, api_url, graphics_url, publisher_id, journal_id, journal_issn, volume_name</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Ingenta Journal Plugin (CLOCKSS)</string>
+  </entry>
+  <entry> 
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%scontent/%s/%s", base_url, publisher_id, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <string>"%scontent/%s?format=clockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%scontent/%s/%s/%s/%08d/%08d", base_url, publisher_id, journal_id, year, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <string>"%scontent/%s/%s/%s/%08d/%08d/art%05d", base_url, publisher_id, journal_id, year, volume_name, issue, article</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <list>
+      <string>"%scontent/%s?format=clockss&amp;volume=%s", base_url, journal_issn, volume_name</string>
+      <string>"%scontent/%s?format=clockss&amp;volume=%s", api_url, journal_issn, volume_name</string>
+      <string>"%slockss.txt", graphics_url</string>
+      <string>"http://docserver.ingentaconnect.com/lockss.txt"</string>
+    </list>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

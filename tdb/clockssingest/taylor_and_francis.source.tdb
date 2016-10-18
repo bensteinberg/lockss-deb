@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = Taylor & Francis ;
+    info[contract] = 2013 ;
+    info[tester] = S
+  >
+  
+  
+  {
+  
+    title <
+      name = Taylor & Francis Source Content
+    >
+    
+    plugin = org.lockss.plugin.taylorandfrancis.ClockssTaylorAndFrancisSourcePlugin
+    param[base_url] = http://clockss-ingest.lockss.org/sourcefiles/taylorfrancis-released/
+    comment[proxy] = DIRECT
+    implicit < status ; status2 ; year ; name ; param[year] >
+    
+    au < readySource ; crawling ; 2013 ; Taylor & Francis Source Content 2013 ; 2013 >
+
+  }
+
+}

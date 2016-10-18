@@ -1,0 +1,93 @@
+{
+
+  publisher <
+    name = Herpetologists' League
+  >
+
+  {
+    title <
+      name = Herpetologica ;
+      issn = 0018-0831 ;
+      eissn = 1938-5099 ;
+      issnl = 0018-0831
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0018-0831
+  
+     au < down ; 2005 ; Herpetologica Volume 61 ; 061 >
+    }
+
+{
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = herp
+      
+      au < released ; 2002 ; Herpetologica Volume 58 ; 58 >
+      au < released ; 2003 ; Herpetologica Volume 59 ; 59 >
+      au < released ; 2004 ; Herpetologica Volume 60 ; 60 >
+      au < doNotProcess ; 2005 ; Herpetologica Volume 61 ; 61 >
+      au < released ; 2006 ; Herpetologica Volume 62 ; 62 >
+      au < released ; 2007 ; Herpetologica Volume 63 ; 63 >
+      au < released ; 2008 ; Herpetologica Volume 64 ; 64 >
+      au < released ; 2009 ; Herpetologica Volume 65 ; 65 >
+      au < released ; 2010 ; Herpetologica Volume 66 ; 66 >
+      au < released ; 2011 ; Herpetologica Volume 67 ; 67 >
+      au < released ; 2012 ; Herpetologica Volume 68 ; 68 >
+      au < released ; 2013 ; Herpetologica Volume 69 ; 69 >
+      au < manifest ; 2014 ; Herpetologica Volume 70 ; 70 >
+ 
+      }
+
+  }
+  
+  {
+
+
+    title <
+      name = Herpetological Monographs ;
+      issn = 0733-1347 ;
+      eissn = 1938-5137 ;
+      issnl = 0733-1347
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume] >
+      plugin = org.lockss.plugin.bioone.BioOnePlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = 0733-1347
+  
+      au < superseded ; 2004 ; Herpetological Monographs Volume 18 [superseded] ; 018 >
+    }
+
+    {
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = hmon
+
+      au < released ; 2002 ; Herpetological Monographs Volume 16 ; 16 >
+      au < released ; 2003 ; Herpetological Monographs Volume 17 ; 17 >
+      au < released ; 2004 ; Herpetological Monographs Volume 18 ; 18 >
+      au < released ; 2005 ; Herpetological Monographs Volume 19 ; 19 >
+      au < released ; 2006 ; Herpetological Monographs Volume 20 ; 20 >
+      au < released ; 2007 ; Herpetological Monographs Volume 21 ; 21 >
+      au < released ; 2008 ; Herpetological Monographs Volume 22 ; 22 > 
+      au < released ; 2009 ; Herpetological Monographs Volume 23 ; 23 >
+      au < released ; 2010 ; Herpetological Monographs Volume 24 ; 24 >
+      au < released ; 2011 ; Herpetological Monographs Volume 25 ; 25 >
+      au < released ; 2012 ; Herpetological Monographs Volume 26 ; 26 >
+      au < released ; 2013 ; Herpetological Monographs Volume 27 ; 27 >
+      au < manifest ; 2014 ; Herpetological Monographs Volume 28 ; 28 >
+
+    }
+
+  }
+
+}
+

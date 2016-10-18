@@ -1,0 +1,39 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bepress.ClockssDigitalCommonsRepositoryPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Digital Commons Plugin (Series, ETDs, Galleries, Book Series for CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.bepress.DigitalCommonsRepositoryPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>7</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Digital Commons Plugin (Series, ETDs, Galleries, Book Series for CLOCKSS), Base URL %s, Collection Type %s, Collection %s, Collection Heading %s", base_url, collection_type, collection, collection_heading</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

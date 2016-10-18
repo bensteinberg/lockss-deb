@@ -1,0 +1,31 @@
+{
+
+  publisher <
+    name = Pacific Coast Entomological Society
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Pan-Pacific Entomologist ;
+      issn = 0031-0603 ;
+      issnl = 0031-0603
+    >
+    
+    param[journal_id] = panp
+  
+    au < released ; 2007 ; Pan-Pacific Entomologist Volume 83 ; 83 >
+    au < released ; 2008 ; Pan-Pacific Entomologist Volume 84 ; 84 >
+    au < released ; 2009 ; Pan-Pacific Entomologist Volume 85 ; 85 >
+    au < released ; 2010 ; Pan-Pacific Entomologist Volume 86 ; 86 >
+    au < released ; 2011 ; Pan-Pacific Entomologist Volume 87 ; 87 >
+    au < released ; 2012 ; Pan-Pacific Entomologist Volume 88 ; 88 >
+    au < released ; 2013 ; Pan-Pacific Entomologist Volume 89 ; 89 >
+    au < manifest ; 2014 ; Pan-Pacific Entomologist Volume 90 ; 90 >
+
+  }
+  
+}

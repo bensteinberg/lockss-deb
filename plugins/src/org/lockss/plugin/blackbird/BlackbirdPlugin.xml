@@ -1,0 +1,82 @@
+<map>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.blackbird.BlackbirdPlugin</string>
+  </entry>
+  <entry>
+    <string>audio/x-pn-realaudio_link_extractor_factory</string>
+    <string>org.lockss.plugin.blackbird.BlackbirdRamLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>6000</long>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>5</string>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Blackbird Plugin, Base URL %s, Volume %d", base_url, volume</string>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Blackbird Plugin</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <string>4,"^%s", base_url</string>
+      <string>1,"^%slockss/lockss-volume%d.htm", base_url, volume</string>
+      <string>1,"^%slockss_media/v%dn[0-9]*/.*\.rm", base_url, volume</string>
+      <string>1,"^%sv%dn[0-9]*/.*", base_url, volume</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss/lockss-volume%d.htm", base_url, volume</string>
+  </entry>
+  <entry>
+  	<string>au_feature_urls</string>
+  	<map>
+	  <entry>
+	    <string>au_title</string>
+	    <string>"%sarchives.htm", base_url</string>
+	  </entry>
+	  <entry>
+	    <string>au_volume</string>
+	    <string>"%slockss/lockss-volume%d.htm", base_url, volume</string>
+	  </entry>
+	  <entry>
+	    <string>au_issue</string>
+	    <string>"%sv%sn%s/index.htm", base_url, volume, issue</string>
+	  </entry>
+  	</map>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume</key>
+        <displayName>Volume No.</displayName>
+        <type>6</type>
+        <size>8</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+</map>

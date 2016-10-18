@@ -1,0 +1,88 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bioone.BioOneAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>  
+  <entry>
+    <string>plugin_name</string>
+    <string>BioOne Plugin (Atypon Systems Platform)</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>24</string>
+  </entry>
+<!-- Now a child of BaseAtypon which lives in a different directory "atypon" -->  
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>26</string>
+  </entry>   
+  <entry>
+    <string>au_name</string>
+    <string>"BioOne Plugin (Atypon Systems Platform), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+<!--  This needs to be in the child because of the special case for the 'coas' journal -->  
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%sloi/%s", base_url, journal_id</string>
+      </entry>
+      <entry>
+        <string>au_volume</string>
+        <map>
+          <entry>
+            <string>coas</string>
+            <string>"%sloi/%s", base_url, journal_id</string>
+          </entry>
+          <entry>
+            <string>*</string>
+            <string>"%slockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+          </entry>
+        </map>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <map>
+          <entry>
+            <string>coas</string>
+            <string>"%sloi/%s", base_url, journal_id</string>
+          </entry>
+          <entry>
+            <string>*</string>
+            <string>"%stoc/%s/%s/%s", base_url, journal_id, volume_name, issue</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>  
+<!--  the pdf filter, article iterator, link extractor, & metadata extractor come from BaseAtypon inheritance -->  
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.bioone.BioOneAtyponHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.bioone.BioOneAtyponHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.bioone.BioOneAtyponUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>plugin_au_config_user_msg</string>
+    <string>Atypon Systems hosts this archival unit (AU) and requires that you &lt;a href=&apos;http://www.bioone.org/action/institutionLockssIpChange&apos;&gt;register the IP address of this LOCKSS box in your institutional account as a crawler&lt;/a&gt; before allowing your LOCKSS box to harvest this AU. Failure to comply with this publisher requirement may trigger crawler traps on the Atypon Systems platform, and your LOCKSS box or your entire institution may be temporarily banned from accessing the site. You only need to register the IP address of your LOCKSS box once for all AUs published by BioOne.</string>
+  </entry>
+</map>

@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = International Association for Bear Research and Management
+  >
+
+  {
+    title <
+      name = Ursus ;
+      issn = 1537-6176 ;
+      eissn = 1938-5439 ;
+      issnl = 1537-6176
+    >
+
+    {
+      implicit < status ; year ; name ; param[volume_name] >
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = ursu
+  
+      au < released ; 2004 ; Ursus Volume 15 ; 15 >
+      au < released ; 2005 ; Ursus Volume 16 ; 16 >
+      au < released ; 2006 ; Ursus Volume 17 ; 17 >
+      au < released ; 2007 ; Ursus Volume 18 ; 18 >
+      au < released ; 2008 ; Ursus Volume 19 ; 19 >
+      au < released ; 2009 ; Ursus Volume 20 ; 20 >
+      au < released ; 2010 ; Ursus Volume 21 ; 21 >
+      au < released ; 2011 ; Ursus Volume 22 ; 22 >
+      au < released ; 2012 ; Ursus Volume 23 ; 23 >
+      au < released ; 2013 ; Ursus Volume 24 ; 24 >
+      au < manifest ; 2014 ; Ursus Volume 25 ; 25 >
+      
+   }
+
+  }
+
+}
+

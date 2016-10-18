@@ -1,0 +1,16 @@
+#!/bin/sh
+CLASSPATHFILE=test/run-classpath
+if [ ! -f $CLASSPATHFILE ]; then
+  echo "${CLASSPATHFILE} not found; run from root of project after ant jar-lockss"
+  exit 1
+fi
+if [ "X${JAVA_HOME}" = "X" ]; then
+  JAVA=java
+else
+  JAVA=$JAVA_HOME/bin/java
+fi
+# Java 6 and earlier on the Mac has an unreasonably low default max heap 
+if [ `uname` = "Darwin" ]; then
+  JAVA_OPTS=-Xmx1024m
+fi
+$JAVA $JAVA_OPTS -classpath `cat $CLASSPATHFILE` org.lockss.tdb.TdbXml "$@"

@@ -1,0 +1,167 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready </string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.palgrave.ClockssPalgraveBookPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>11</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>4</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>11</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>2</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <!-- needs 1.67 for PdfTokenStreamWorker, ZipFilter -->
+    <string>1.67.0</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Palgrave Macmillan Book Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>book_isbn</key>
+        <displayName>Book ISBN</displayName>
+        <description>International Standard Book Number</description>
+        <type>1</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Palgrave Macmillan Book Plugin (CLOCKSS), Base URL %s, ISBN %s", base_url, book_isbn</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%spc/doifinder/10.1057/%s", base_url, book_isbn</string>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <!-- examples
+    start_url: http://www.palgraveconnect.com/pc/doifinder/10.1057/9781137284808
+    epub: http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137284808.epub
+    pdf: http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
+    ris citation  http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137310149&WT.cg_n=eBooks&WT.cg_s=Citation%20Export
+    new epub: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803.epub
+    new pdf: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803
+    new ris citation: http://www.palgraveconnect.com/pc/browse/citationExport?doi=10.1057/9781137304094
+    -->
+    <list>
+      <!-- removes gifs for fb, reddit, etc.. -->
+      <string>2,"^%sview/images/.*\.gif", base_url</string> 
+      <!-- removes jpgs for journals -->
+      <string>2,"^%spal/images/journal-covers/[^/]+\.(jpg|gif)", base_url</string> 
+      <!-- catch this book cover(s), get rid of the rest -->
+      <string>1,"^%spc/[^/]+/(small|large)/%s_(large|small)\.(jpg|gif)", base_url, book_isbn</string> 
+      <string>2,"^%spc/[^/]+/small/[^/]+_small\.(jpg|gif)", base_url</string> 
+      <string>2,"^https?://%s/.*\.(bmp|css|gif|ico|jpe?g|js|png|tif?f)$", base_url_host</string>
+      <string>2, "^%spc/(view|images)/", base_url</string>
+      <string>4,"^%s", base_url</string>
+      <!-- gets RIS metadata -->
+      <string>1,"^%spc/browse/citationExport\?doi=10\.1057/%s[^/]+Export$", base_url, book_isbn</string>
+      <!-- gets book/epub pdf (no need for chapter pdf) -->
+      <string>1,"^%spc/[^/]+/browse/inside/(download|epub)/%s.(pdf|epub)$", base_url, book_isbn</string>
+      <!-- matches new pdf, epub 1/14/15 -->
+      <string>1,"^%spc/doifinder/download/10\.1057/%s(\.epub)?$", base_url, book_isbn</string>      
+      <!-- matches new ris 1/14/15 -->
+      <string>1,"^%spc/browse/citationExport\?doi=10\.1057/%s$", base_url, book_isbn</string>
+      <!-- no need for the rest; CLOCKSS only -->
+      <string>2, "^%spc/[^/]+/browse/", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <!-- examples
+    http://www.palgraveconnect.com/pc/education2013/browse/inside/download/9781137021052.pdf
+    http://www.palgraveconnect.com/pc/socialsciences2013/browse/inside/epub/9781137268839.epub
+    new examples - 1/14/15 :
+    new epub: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803.epub
+    new pdf: http://www.palgraveconnect.com/pc/doifinder/download/10.1057/9781137023803
+    -->
+    <list>
+    <string>"^%spc/[^/]+/browse/inside/[^/]+/%s\.(pdf|epub)$", base_url, book_isbn</string>
+    <!-- matches new pdf/epub - 1/14/15 -->
+    <string>"^%spc/doifinder/download/10\.1057/%s(\.epub)?$", base_url, book_isbn</string>      
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>application/x-research-info-systems_filter_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookRisFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookPdfFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/epub+zip_filter_factory</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookEpubFilterFactory</string>
+  </entry>
+  <!-- no longer need the normalizer
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.palgrave.PalgraveBookUrlNormalizer</string>
+  </entry>  
+  -->
+  <entry>
+    <string>application/x-research-info-systems_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;RIS</string>
+        <string>org.lockss.plugin.palgrave.PalgraveBookRisMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+</map>

@@ -1,0 +1,32 @@
+{
+
+  publisher <
+    name = Raptor Research Foundation
+  >
+
+  plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+  implicit < status ; year ; name ; param[volume_name] >
+  param[base_url] = http://www.bioone.org/
+
+  {
+    title <
+      name = Journal of Raptor Research ;
+      issn = 0892-1016 ;
+      issnl = 0892-1016
+    >
+    
+    param[journal_id] = rapt
+    
+    au < released ; 2006 ; Journal of Raptor Research Volume 40 ; 40 >
+    au < released ; 2007 ; Journal of Raptor Research Volume 41 ; 41 >
+    au < released ; 2008 ; Journal of Raptor Research Volume 42 ; 42 >
+    au < released ; 2009 ; Journal of Raptor Research Volume 43 ; 43 >
+    au < released ; 2010 ; Journal of Raptor Research Volume 44 ; 44 >
+    au < released ; 2011 ; Journal of Raptor Research Volume 45 ; 45 >
+    au < released ; 2012 ; Journal of Raptor Research Volume 46 ; 46 >
+    au < released ; 2013 ; Journal of Raptor Research Volume 47 ; 47 >
+    au < manifest ; 2014 ; Journal of Raptor Research Volume 48 ; 48 >
+
+  }
+  
+}

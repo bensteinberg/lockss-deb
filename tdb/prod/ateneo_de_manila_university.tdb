@@ -1,0 +1,27 @@
+{
+  publisher <
+    name = Ateneo de Manila University
+  >
+
+  plugin = org.lockss.plugin.projmuse.ProjectMusePlugin
+  param[base_url] = http://muse.jhu.edu/
+  implicit < status ; year ; name ; param[volume] >
+
+  {
+    title <
+      name = Philippine Studies: Historical and Ethnographic Viewpoints ;
+      issn = 0031-7837 ;
+      eissn = 2012-2489 
+    >
+
+    param[journal_dir] = philippine_studies
+    attr[journal_id] = phs
+
+    au < released ; 2011 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 59 ; 59 >
+    au < released ; 2012 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 60 ; 60 >
+    au < released ; 2013 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 61 ; 61 >
+    au < manifest ; 2014 ; Philippine Studies: Historical and Ethnographic Viewpoints Volume 62 ; 62 >
+
+  }
+  
+}

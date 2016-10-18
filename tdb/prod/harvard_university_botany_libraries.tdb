@@ -1,0 +1,38 @@
+{
+
+  publisher <
+    name = Harvard University Botany Libraries
+  >
+
+  {
+    title <
+      name = Harvard Papers in Botany ;
+      issn = 1043-4534 ;
+      eissn = 1938-2944 ;
+      issnl = 1043-4534
+    >
+
+    {
+
+      plugin = org.lockss.plugin.bioone.BioOneAtyponPlugin  
+      implicit < status ; year ; name ; param[volume_name] >
+      param[base_url] = http://www.bioone.org/
+      param[journal_id] = hpib
+      
+      au < released ; 2005 ; Harvard Papers in Botany Volume 10 ; 10 >
+      au < released ; 2006-2007 ; Harvard Papers in Botany Volume 11 ; 11 >
+      au < released ; 2007 ; Harvard Papers in Botany Volume 12 ; 12 >
+      au < released ; 2008 ; Harvard Papers in Botany Volume 13 ; 13 >
+      au < released ; 2009 ; Harvard Papers in Botany Volume 14 ; 14 >
+      au < released ; 2010 ; Harvard Papers in Botany Volume 15 ; 15 >
+      au < released ; 2011 ; Harvard Papers in Botany Volume 16 ; 16 >
+      au < released ; 2012 ; Harvard Papers in Botany Volume 17 ; 17 >
+      au < released ; 2013 ; Harvard Papers in Botany Volume 18 ; 18 >
+      au < manifest ; 2014 ; Harvard Papers in Botany Volume 19 ; 19 >
+
+    }
+
+  }
+
+}
+

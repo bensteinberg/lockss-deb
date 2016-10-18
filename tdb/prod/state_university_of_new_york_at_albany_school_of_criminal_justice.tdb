@@ -1,0 +1,25 @@
+{
+
+  publisher <
+    name = State University of New York at Albany School of Criminal Justice
+  >
+  
+  {
+  
+    title <
+      name = Journal of Criminal Justice and Popular Culture ;
+      eissn = 1070-8286 ;
+      issnl = 1070-8286
+    >
+    
+    rights = openaccess
+    plugin = edu.indiana.lib.plugin.jcjpc.JcjpcPlugin
+    param[base_url] = http://www.albany.edu/scj/jcjpc/
+    implicit < status ; year ; name ; param[volume] >
+    comment[0] = see RU1943. Journal appears to be abandoned.
+
+    au < down ; 2003 ; Journal of Criminal Justice and Popular Culture Volume 10 ; 10 >
+    
+  }
+
+}

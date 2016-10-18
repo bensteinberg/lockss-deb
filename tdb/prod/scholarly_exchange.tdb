@@ -1,0 +1,304 @@
+{
+
+  publisher <
+    name = Scholarly Exchange
+  >
+
+  plugin = org.lockss.plugin.ojs2.OJS2Plugin
+  implicit < status ; year ; name ; volume ; param[year] >
+  
+  comment[0] = For list of lockss enabled journals: http://scholarlyexchange.org/ojs/gateway/lockss
+
+  {
+  
+    title < 
+      name = African Journal of Pharmaceutical Sciences and Pharmacy ;
+      eissn = 2152-7849
+    >
+    
+    param[base_url] = http://www.ajpspjournal.com/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 4 ; 4 ; 2013 >
+    au < expected ; 2014 ; African Journal of Pharmaceutical Sciences and Pharmacy Volume 5 ; 5 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Coriolis: Interdisciplinary Journal of Maritime Studies ;
+      eissn = 2163-8381
+    >
+    
+    param[base_url] = http://ijms.nmdl.org/
+    param[journal_id] = ?
+    comment[0] = Journal closed to new content. Last volume 2013.
+
+    au < exists ; 2010 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; Coriolis: Interdisciplinary Journal of Maritime Studies Volume 4 ; 4 ; 2013 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = International Journal of Infection Control ;
+      eissn = 1996-9783 
+    >
+    
+    param[base_url] = http://www.ijic.info/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; International Journal of Infection Control Volume 6 ; 6 ; 2010 >
+    au < exists ; 2011 ; International Journal of Infection Control Volume 7 ; 7 ; 2011 >
+    au < exists ; 2012 ; International Journal of Infection Control Volume 8 ; 8 ; 2012 >
+    au < exists ; 2013 ; International Journal of Infection Control Volume 9 ; 9 ; 2013 >
+    au < exists ; 2014 ; International Journal of Infection Control Volume 10 ; 10 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = International Journal of Transactional Analysis Research ;
+      eissn = 2218-3159 
+    >
+    
+    param[base_url] = http://www.ijtar.org/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; International Journal of Transactional Analysis Research Volume 1 ; 1 ; 2010 >
+    au < exists ; 2011 ; International Journal of Transactional Analysis Research Volume 2 ; 2 ; 2011 >
+    au < exists ; 2012 ; International Journal of Transactional Analysis Research Volume 3 ; 3 ; 2012 >
+    au < exists ; 2013 ; International Journal of Transactional Analysis Research Volume 4 ; 4 ; 2013 >
+    au < exists ; 2014 ; International Journal of Transactional Analysis Research Volume 5 ; 5 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Intersticios ;
+      eissn = 1887-3898 
+    >
+    
+    param[base_url] = http://www.intersticios.es/
+    param[journal_id] = ?
+
+    au < exists ; 2007 ; Intersticios Volume 1 ; 1 ; 2007 >
+    au < exists ; 2008 ; Intersticios Volume 2 ; 2 ; 2008 >
+    au < exists ; 2009 ; Intersticios Volume 3 ; 3 ; 2009 >
+    au < exists ; 2010 ; Intersticios Volume 4 ; 4 ; 2010 >
+    au < exists ; 2011 ; Intersticios Volume 5 ; 5 ; 2011 >
+    au < exists ; 2012 ; Intersticios Volume 6 ; 6 ; 2012 >
+    au < exists ; 2013 ; Intersticios Volume 7 ; 7 ; 2013 >
+    au < exists ; 2014 ; Intersticios Volume 8 ; 8 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Investigative Sciences Journal ;
+      eissn = 1942-7794 
+    >
+    
+    param[base_url] = http://www.investigativesciencesjournal.org/
+    param[journal_id] = ?
+
+    au < exists ; 2009 ; Investigative Sciences Journal Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Investigative Sciences Journal Volume 2 ; 2 ; 2010 >
+    au < exists ; 2011 ; Investigative Sciences Journal Volume 3 ; 3 ; 2011 >
+    au < exists ; 2012 ; Investigative Sciences Journal Volume 4 ; 4 ; 2012 >
+    au < exists ; 2013 ; Investigative Sciences Journal Volume 5 ; 5 ; 2013 >
+    au < exists ; 2014 ; Investigative Sciences Journal Volume 6 ; 6 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Applied Leadership and Management ;
+      eissn = 2194-9522
+    >
+    
+    param[base_url] = http://www.journal-alm.org/
+    param[journal_id] = ?
+
+    au < exists ; 2012 ; Journal of Applied Leadership and Management Volume 2012 ; 2012 ; 2012 >
+    au < exists ; 2013 ; Journal of Applied Leadership and Management Volume 2013 ; 2013 ; 2013 >
+    au < exists ; 2014 ; Journal of Applied Leadership and Management Volume 2014 ; 2014 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Experimental & Clinical Assisted Reproduction ;
+      eissn = 1743-1050
+    >
+    
+    param[base_url] = http://www.jexpclinassistreprod.com/
+    param[journal_id] = ?
+    comment[0] = Journal closed to new content. Last volume 2011.
+
+    au < exists ; 2004 ; Journal of Experimental & Clinical Assisted Reproduction Volume 1 ; 1 ; 2004 >
+    au < exists ; 2005 ; Journal of Experimental & Clinical Assisted Reproduction Volume 2 ; 2 ; 2005 >
+    au < exists ; 2006 ; Journal of Experimental & Clinical Assisted Reproduction Volume 3 ; 3 ; 2006 >
+    au < exists ; 2007 ; Journal of Experimental & Clinical Assisted Reproduction Volume 4 ; 4 ; 2007 >
+    au < exists ; 2008 ; Journal of Experimental & Clinical Assisted Reproduction Volume 5 ; 5 ; 2008 >
+    au < exists ; 2009 ; Journal of Experimental & Clinical Assisted Reproduction Volume 6 ; 6 ; 2009 >
+    au < exists ; 2010 ; Journal of Experimental & Clinical Assisted Reproduction Volume 7 ; 7 ; 2010 >
+    au < exists ; 2011 ; Journal of Experimental & Clinical Assisted Reproduction Volume 8 ; 8 ; 2011 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Journal of Medical Education Perspectives ;
+      eissn = 2167-5597
+    >
+    
+    param[base_url] = http://www.jmeps.com/
+    param[journal_id] = ?
+
+    au < exists ; 2012 ; Journal of Medical Education Perspectives Volume 1 ; 1 ; 2012 >
+    au < exists ; 2013 ; Journal of Medical Education Perspectives Volume 2 ; 2 ; 2013 >
+    au < exists ; 2014 ; Journal of Medical Education Perspectives Volume 3 ; 3 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = KCA Journal of Business Management ;
+      issn = 2072-7992 ;
+      eissn = 2071-2162
+    >
+    
+    param[base_url] = http://www.kcajournals.com/
+    param[journal_id] = ?
+
+    au < exists ; 2008 ; KCA Journal of Business Management Volume 1 ; 1 ; 2008 >
+    au < exists ; 2009 ; KCA Journal of Business Management Volume 2 ; 2 ; 2009 >
+    au < exists ; 2011 ; KCA Journal of Business Management Volume 3 ; 3 ; 2011 >
+    au < exists ; 2012 ; KCA Journal of Business Management Volume 4-5 ; 4-5 ; 2012 >
+    au < expected ; 2014 ; KCA Journal of Business Management Volume 6 ; 6 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Khyber Medical University Journal ;
+      issn = 2305-2643 ;
+      eissn = 2305-2651
+    >
+    
+    param[base_url] = http://www.kmuj.kmu.edu.pk/
+    param[journal_id] = ?
+
+    au < exists ; 2009 ; Khyber Medical University Journal Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Khyber Medical University Journal Volume 2 ; 2 ; 2010 >
+    au < exists ; 2011 ; Khyber Medical University Journal Volume 3 ; 3 ; 2011 >
+    au < exists ; 2012 ; Khyber Medical University Journal Volume 4 ; 4 ; 2012 >
+    au < exists ; 2013 ; Khyber Medical University Journal Volume 5 ; 5 ; 2013 >
+    au < exists ; 2014 ; Khyber Medical University Journal Volume 6 ; 6 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Mediterranean Journal of Hematology and Infectious Diseases ;
+      eissn = 2035-3006
+    >
+    
+    param[base_url] = http://www.mjhid.org/
+    param[journal_id] = ?
+
+    au < exists ; 2009 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 1 ; 1 ; 2009 >
+    au < exists ; 2010 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 2 ; 2 ; 2010 >
+    au < exists ; 2011 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 3 ; 3 ; 2011 >
+    au < exists ; 2012 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 4 ; 4 ; 2012 >
+    au < exists ; 2013 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 5 ; 5 ; 2013 >
+    au < exists ; 2014 ; Mediterranean Journal of Hematology and Infectious Diseases Volume 6 ; 6 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Policy Perspectives ;
+      eissn = 1085-7087
+    >
+    
+    param[base_url] = http://www.policy-perspectives.org/
+    param[journal_id] = ?
+
+    au < exists ; 1994 ; Policy Perspectives Volume 1 ; 1 ; 1994 >
+    au < exists ; 1995 ; Policy Perspectives Volume 2 ; 2 ; 1995 >
+    au < exists ; 1996 ; Policy Perspectives Volume 3 ; 3 ; 1996 >
+    au < exists ; 1997 ; Policy Perspectives Volume 4 ; 4 ; 1997 >
+    au < exists ; 1998 ; Policy Perspectives Volume 5 ; 5 ; 1998 >
+    au < exists ; 1999 ; Policy Perspectives Volume 6-7 ; 6-7 ; 1999 >
+    au < exists ; 2000 ; Policy Perspectives Volume 7-8 ; 7-8 ; 2000 >
+    au < exists ; 2001 ; Policy Perspectives Volume 8 ; 8 ; 2001 >
+    au < exists ; 2002 ; Policy Perspectives Volume 9 ; 9 ; 2002 >
+    au < exists ; 2003 ; Policy Perspectives Volume 10 ; 10 ; 2003 >
+    au < exists ; 2004 ; Policy Perspectives Volume 11 ; 11 ; 2004 >
+    au < exists ; 2005 ; Policy Perspectives Volume 12 ; 12 ; 2005 >
+    au < exists ; 2006 ; Policy Perspectives Volume 13 ; 13 ; 2006 >
+    au < exists ; 2007 ; Policy Perspectives Volume 14 ; 14 ; 2007 >
+    au < exists ; 2008 ; Policy Perspectives Volume 15 ; 15 ; 2008 >
+    au < exists ; 2009 ; Policy Perspectives Volume 16 ; 16 ; 2009 >
+    au < exists ; 2010 ; Policy Perspectives Volume 17 ; 17 ; 2010 >
+    au < exists ; 2011 ; Policy Perspectives Volume 18 ; 18 ; 2011 >
+    au < exists ; 2012 ; Policy Perspectives Volume 19 ; 19 ; 2012 >
+    au < exists ; 2013 ; Policy Perspectives Volume 20 ; 20 ; 2013 >
+    au < exists ; 2014 ; Policy Perspectives Volume 21 ; 21 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Syllabus ;
+      eissn = 2163-3177
+    >
+    
+    param[base_url] = http://www.syllabusjournal.org/
+    param[journal_id] = ?
+
+    au < exists ; 2012 ; Syllabus Volume 1 ; 1 ; 2012 >
+    au < exists ; 2013 ; Syllabus Volume 2 ; 2 ; 2013 >
+    au < expected ; 2014 ; Syllabus Volume 3 ; 3 ; 2014 >
+    
+  }
+  
+  {
+  
+    title < 
+      name = Understanding and Dismantling Privilege ;
+      eissn = 2152-1875
+    >
+    
+    param[base_url] = http://www.wpcjournal.com/
+    param[journal_id] = ?
+
+    au < exists ; 2010 ; Understanding and Dismantling Privilege Volume 1 ; 1 ; 2010 >
+    au < exists ; 2012 ; Understanding and Dismantling Privilege Volume 2 ; 2 ; 2012 >
+    au < exists ; 2013 ; Understanding and Dismantling Privilege Volume 3 ; 3 ; 2013 >
+    au < exists ; 2014 ; Understanding and Dismantling Privilege Volume 4 ; 4 ; 2014 >
+    
+  }
+  
+}
+

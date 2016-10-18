@@ -1,0 +1,27 @@
+{
+
+  publisher <
+    name = European Association for Geochemistry
+  >
+
+  plugin = org.lockss.plugin.highwire.HighWirePressH20Plugin
+  implicit < status ; year ; name ; param[volume_name] >
+
+  {
+
+    title <
+      name = Geochemical Perspectives ;
+      issn = 2223-7755 ;
+      eissn = 2224-2759 ;
+      issnl = 2223-7755
+    >
+
+    param[base_url] = http://perspectives.geoscienceworld.org/
+    
+    au < released ; 2012 ; Geochemical Perspectives Volume 1 ; 1 >
+    au < released ; 2013 ; Geochemical Perspectives Volume 2 ; 2 >
+    au < manifest ; 2014 ; Geochemical Perspectives Volume 3 ; 3 >
+    
+  }
+
+}

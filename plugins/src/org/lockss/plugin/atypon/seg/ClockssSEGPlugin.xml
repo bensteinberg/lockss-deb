@@ -1,0 +1,73 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.atypon.seg.ClockssSEGPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>8</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>Society Of Exploration Geophysicists Plugin (CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.atypon.BaseAtyponPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>26</string>
+  </entry>
+  <entry>
+    <string>plugin_publishing_platform</string>
+    <string>Atypon</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Metadata</string>
+        <string>13</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>18</string>
+      </entry>
+      <entry>
+        <string>Substance</string>
+        <string>6</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"Society Of Exploration Geophysicists (CLOCKSS), Base URL %s, Journal ID %s, Volume %s", base_url, journal_id, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%sclockss/%s/%s/index.html", base_url, journal_id, volume_name</string>
+  </entry>
+ <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGHtmlHashFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>application/pdf_filter_factory</string>
+    <string>org.lockss.plugin.atypon.seg.SEGPdfFilterFactory</string>
+  </entry>
+  <entry>
+  <!--  CLOCKSS does not need this warning message about registering IP addresses -->
+    <string>plugin_au_config_user_msg</string>
+    <org.lockss.util.Default />
+  </entry>  
+</map>    
+

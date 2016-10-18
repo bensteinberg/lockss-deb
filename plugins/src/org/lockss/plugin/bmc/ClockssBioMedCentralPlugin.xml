@@ -1,0 +1,40 @@
+<map>
+  <!-- ClockssBioMedCentralPlugin.xml inheriting from BioMedCentralPlugin.xml -->
+  <entry>
+    <string>plugin_status</string>
+    <string>ready</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.bmc.ClockssBioMedCentralPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_version</string>
+    <string>36</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS)</string>
+  </entry>
+  <entry>
+    <string>plugin_parent</string>
+    <string>org.lockss.plugin.bmc.BioMedCentralPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_parent_version</string>
+    <string>36</string>
+  </entry> 
+  <entry>
+    <string>au_name</string>
+    <string>"BioMed Central Plugin (BMC Journals, Chemistry Central, for CLOCKSS), Base URL %s, ISSN %s, Volume %s", base_url, journal_issn, volume_name</string>
+  </entry>
+  <entry>
+    <string>clockss_override</string>
+    <map>
+      <entry>
+        <string>au_def_pause_time</string>
+        <long>100</long>
+      </entry>
+    </map>
+  </entry>
+</map>

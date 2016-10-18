@@ -1,0 +1,44 @@
+{
+
+  publisher <
+    name = Columbia University Libraries
+  >
+  
+  {
+  
+    title <
+      name = Columbia Undergraduate Science Journal ;
+      issn = 1932-765X ;
+      eissn = 1932-7641 ;
+      issnl = 1932-7641
+    >  
+
+    rights = openaccess
+    plugin = org.lockss.plugin.ojs.OJSPlugin
+    implicit < status ; year ; name ; volume ; param[year] >
+
+    {
+
+      param[base_url] = http://www.cusj.columbia.edu/cusj/
+
+      au < superseded ; 2006 ; Columbia Undergraduate Science Journal 2006 [superseded] ; 1 ; 2006 >
+    
+    }
+    
+    {
+    
+      param[base_url] = http://cusj.columbia.edu/cusj/ 
+      
+      comment[doNotProcess] = PDFs have many errors. No response from publisher. Defer processing.
+      comment[released] = possible that 2008 and 2009 were released accidentally using OJS legacy plugin
+  
+      au < doNotProcess ; 2006 ; Columbia Undergraduate Science Journal 2006 ; 1 ; 2006 >
+      au < doNotProcess ; 2007 ; Columbia Undergraduate Science Journal 2007 ; 2 ; 2007 >
+      au < doNotProcess ; 2008 ; Columbia Undergraduate Science Journal 2008 ; 3 ; 2008 >
+      au < doNotProcess ; 2009 ; Columbia Undergraduate Science Journal 2009 ; 4 ; 2009 >
+      
+    }
+  
+  }
+  
+}

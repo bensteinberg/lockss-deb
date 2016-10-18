@@ -1,0 +1,232 @@
+<map>
+  <entry>
+    <string>plugin_status</string>
+    <string>testing - Evan</string>
+  </entry>
+  <entry>
+    <string>plugin_identifier</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPlugin</string>
+  </entry>
+  <entry>
+    <string>plugin_name</string>
+    <string>HighWire Drupal Plugin</string>
+  </entry>
+  <!--  
+        This is a list of HighWire Drupal Child plugins - be sure to update
+        the child's plugin_parent_version number to match, then
+        update the child's plugin_version number:
+        aps.APSDrupalPlugin
+        elife.ELifeDrupalPlugin
+        
+        Note: the LOCKSS child is the parent of the CLOCKSS child plugin, therefore
+        update the CLOCKSS child plugin_version & plugin_parent_version with 
+        the LOCKSS child's new version
+        
+   -->
+  <entry>
+    <string>plugin_version</string>
+    <string>16</string>
+  </entry>
+  <entry>
+    <string>plugin_feature_version_map</string>
+    <map>
+      <entry>
+        <string>Substance</string>
+        <string>3</string>
+      </entry>
+      <entry>
+        <string>Poll</string>
+        <string>10</string>
+      </entry>
+      <entry>
+        <string>Metadata</string>
+        <string>3</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>required_daemon_version</string>
+    <string>1.67.0</string>
+  </entry>
+  <entry>
+    <string>plugin_config_props</string>
+    <list>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>base_url</key>
+        <displayName>Base URL</displayName>
+        <description>Usually of the form http://&lt;journal-name&gt;.com/</description>
+        <type>3</type>
+        <size>40</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+      <org.lockss.daemon.ConfigParamDescr>
+        <key>volume_name</key>
+        <displayName>Volume Name</displayName>
+        <type>1</type>
+        <size>20</size>
+        <definitional>true</definitional>
+        <defaultOnly>false</defaultOnly>
+      </org.lockss.daemon.ConfigParamDescr>
+    </list>
+  </entry>
+  <entry>
+    <string>au_name</string>
+    <string>"HighWire Drupal Plugin, Base URL %s, Volume %s", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_start_url</string>
+    <string>"%slockss-manifest/vol_%s_manifest.html", base_url, volume_name</string>
+  </entry>
+  <entry>
+    <string>au_feature_urls</string>
+    <map>
+      <entry>
+        <string>au_title</string>
+        <string>"%s", base_url</string>
+      </entry>
+      <entry>
+        <string>au_issue</string>
+        <string>"%scontent/%s/%s.toc", base_url, volume_name, issue</string>
+      </entry>
+      <entry>
+        <string>au_article</string>
+        <map>
+          <entry>
+            <string>pdf+html;*</string>
+            <string>"%scontent/%s/%s/%s.full.pdf+html", base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>pdf</string>
+            <string>"%scontent/%s/%s/%s.full.pdf", base_url, volume_name, issue, article</string>
+          </entry>
+          <entry>
+            <string>html</string>
+            <string>"%scontent/%s/%s/%s", base_url, volume_name, issue, article</string>
+          </entry>
+        </map>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>au_crawlrules</string>
+    <list>
+      <!-- all content from CDN -->
+      <string>1,"^https?://(.+[.]cloudfront[.]net|cdn[.](mathjax|elifesciences)[.]org)/."</string>
+      <!-- no gifs from other volumes -->
+      <string>2,"^%scontent/(?!([^/]+/)?%s/)[^?]*[.]gif", base_url, volume_name</string>
+      <!-- all fonts, images, resources, css, js, etc. 
+      http://eurpub.oxfordjournals.org/sites/default/files/styles/2_grid/public/1.cover-source_3.jpg?itok=eKwbGaYh -->
+      <string>1,"^https?://%s/[^?]*[.](?:bmp|eot|gif|ico|jpe?g|png|svg|tif?f|ttf|woff|(css|js)(?:[?].*)?)$", base_url_host</string>
+      <string>1,"^https?://%s[^?]*/highwire/jcore", base_url_host</string>
+      <!-- Do not crawl unless from base url -->
+      <string>4,"^%s", base_url</string>
+      <!-- Do not crawl these BMJ & OUP variations -->
+      <string>2,"^%scontent/.+([.](print|explore[?])|/(article-info|related|submit))", base_url</string>
+      <!-- filter links with '{' like http://ajprenal.physiology.org/content/299/4/{openurl}?query=rft... -->
+      <string>2,"^%s(?:[^?]+([?](sort|tab|form)|[.]index-by-author|most-(cited|read)|featured(_article|-podcasts)|(back-matter|ed-board)[.]pdf)|content/(by/|early/|[^{]+[{]))", base_url</string>
+      <string>1,"^%s(?:content(?:/[^/]+)?/(?:%s|suppl)|highwire/(?:filestream|markup|article_citation_preview))/", base_url, volume_name</string>
+      <string>1,"^%shighwire/citation/[^/]+/(bookends|easybib|mendeley|papers|reference-manager|refworks|ris|zotero)$", base_url</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_def_new_content_crawl</string>
+    <long>1209600000</long>
+  </entry>
+  <entry>
+    <string>plugin_crawl_url_comparator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20CrawlUrlComparatorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_cache_result_list</string>
+    <list>
+      <string>500=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>502=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+      <string>504=org.lockss.plugin.highwire.HighWireDrupalHttpResponseHandler</string>
+    </list>
+  </entry>
+  <entry>
+    <string>plugin_article_iterator_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_article_metadata_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalArticleIteratorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_metadata_extractor_factory_map</string>
+    <map>
+      <entry>
+        <string>*;DublinCore</string>
+        <string>org.lockss.plugin.highwire.HighWireDrupalHtmlMetadataExtractorFactory</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <string>text/html_link_extractor_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlLinkExtractorFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_crawl_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlCrawlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>text/html_filter_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalHtmlFilterFactory</string>
+  </entry>
+  <entry>
+    <string>au_url_normalizer</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalUrlNormalizer</string>
+  </entry>
+  <entry>
+    <string>au_substance_url_pattern</string>
+    <list>
+      <string>"^%scontent(?:/[^/]+)?/%s/[^/]+/[^/.?]+(?:[.]full(?:[.]pdf)?)?$", base_url, volume_name</string>
+    </list>
+  </entry>
+  <entry>
+    <string>au_login_page_checker</string>
+    <string>org.lockss.plugin.highwire.HighWirePressH20LoginPageChecker</string>
+  </entry>
+  <entry>
+    <string>au_permission_checker_factory</string>
+    <string>org.lockss.plugin.highwire.HighWireDrupalPermissionCheckerFactory</string>
+  </entry>
+  <entry>
+    <string>plugin_fetch_rate_limiter_source</string>
+    <string>key:HighWire</string>
+  </entry>
+  <entry>
+    <string>au_def_pause_time</string>
+    <long>3000</long>
+  </entry>
+  <entry>
+    <string>au_mime_rate_limiter_map</string>
+    <map>
+      <entry>
+        <string>application/pdf,text/html,application/vnd.ms-powerpoint</string>
+        <string>1/3000</string>
+      </entry>
+    </map>
+  </entry>
+  <entry>
+    <!-- manifest to issue -->
+    <string>au_refetch_depth</string>
+    <int>2</int>
+  </entry>
+  <entry>
+    <!-- the au_permitted_host_pattern must also find match in lockss-daemon config
+         org.lockss.crawler.allowedPluginPermittedHosts -->
+    <string>au_permitted_host_pattern</string>
+    <string>.+[.]cloudfront[.]net|cdn[.](mathjax|elifesciences)[.]org</string>
+  </entry>
+  <entry>
+    <!-- APS & OUP use cdn -->
+    <string>au_repair_from_peer_if_missing_url_pattern</string>
+    <string>/(css|js)_[^/]+[.](css|js)$</string>
+  </entry>
+  <entry>
+    <string>au_exclude_urls_from_polls_pattern</string>
+    <string>/(css|js)_[^/]+[.](css|js)$</string>
+  </entry>
+</map>
