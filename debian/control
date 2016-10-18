@@ -1,0 +1,12 @@
+Source: lockss-daemon
+Maintainer: Ben Steinberg <bsteinberg@law.harvard.edu>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.2
+Build-Depends: debhelper (>= 9), ant, openjdk-7-jdk, junit, libxml2-utils
+Homepage: https://www.lockss.org/
+
+Package: lockss-daemon
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Lots of Copies Keep Stuff Safe
