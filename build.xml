@@ -672,6 +672,7 @@ Args:
            nowarn="${nowarn}"
 	   memoryMaximumSize="256m"
            >
+       <compilerarg value="-XDignore.symbol.file" />
        <classpath refid="@{cpid}" />
       <javacelem/>
     </javac>

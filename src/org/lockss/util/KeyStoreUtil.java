@@ -38,6 +38,7 @@ import java.security.*;
 import java.security.cert.*;
 
 import sun.security.x509.*;
+import sun.security.tools.keytool.*;
 
 import org.lockss.app.*;
 import org.lockss.daemon.*;

@@ -40,6 +40,7 @@ import java.security.*;
 import java.security.cert.*;
 
 import sun.security.x509.*;
+import sun.security.tools.keytool.*;
 
 public class KeystoreTestUtils {
 
