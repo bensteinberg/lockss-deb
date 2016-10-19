@@ -1,0 +1,152 @@
+From: Ben Steinberg <bsteinberg@law.harvard.edu>
+Date: Wed, 19 Oct 2016 12:50:08 +0000
+Subject: Fixes for move of CertAndKeyGen from sun.security.x509 to
+ sun.security.tools.keytool
+
+---
+ build.xml                                             | 1 +
+ src/org/lockss/util/KeyStoreUtil.java                 | 1 +
+ test/src/org/lockss/test/KeystoreTestUtils.java       | 1 +
+ tools/src/org/lockss/devtools/KeyStoresPhase1.java    | 3 +--
+ tools/src/org/lockss/devtools/KeyStoresPhase2.java    | 3 +--
+ tools/src/org/lockss/keystore/BuildPermKeyStores.java | 3 +--
+ tools/src/org/lockss/keystore/BuildTempKeyStores.java | 3 +--
+ tools/src/org/lockss/keystore/EditKeyStores.java      | 3 +--
+ 8 files changed, 8 insertions(+), 10 deletions(-)
+
+diff --git a/build.xml b/build.xml
+index 5275ca1..217f1d8 100644
+--- a/build.xml
++++ b/build.xml
+@@ -672,6 +672,7 @@ Args:
+            nowarn="${nowarn}"
+ 	   memoryMaximumSize="256m"
+            >
++       <compilerarg value="-XDignore.symbol.file" />
+        <classpath refid="@{cpid}" />
+       <javacelem/>
+     </javac>
+diff --git a/src/org/lockss/util/KeyStoreUtil.java b/src/org/lockss/util/KeyStoreUtil.java
+index 35d4391..7a4d486 100644
+--- a/src/org/lockss/util/KeyStoreUtil.java
++++ b/src/org/lockss/util/KeyStoreUtil.java
+@@ -38,6 +38,7 @@ import java.security.*;
+ import java.security.cert.*;
+ 
+ import sun.security.x509.*;
++import sun.security.tools.keytool.*;
+ 
+ import org.lockss.app.*;
+ import org.lockss.daemon.*;
+diff --git a/test/src/org/lockss/test/KeystoreTestUtils.java b/test/src/org/lockss/test/KeystoreTestUtils.java
+index 2651c0a..99cf94a 100644
+--- a/test/src/org/lockss/test/KeystoreTestUtils.java
++++ b/test/src/org/lockss/test/KeystoreTestUtils.java
+@@ -40,6 +40,7 @@ import java.security.*;
+ import java.security.cert.*;
+ 
+ import sun.security.x509.*;
++import sun.security.tools.keytool.*;
+ 
+ public class KeystoreTestUtils {
+ 
+diff --git a/tools/src/org/lockss/devtools/KeyStoresPhase1.java b/tools/src/org/lockss/devtools/KeyStoresPhase1.java
+index 0867959..7813da6 100644
+--- a/tools/src/org/lockss/devtools/KeyStoresPhase1.java
++++ b/tools/src/org/lockss/devtools/KeyStoresPhase1.java
+@@ -46,14 +46,13 @@ import sun.security.x509.AlgorithmId;
+ import sun.security.x509.X509CertImpl;
+ import sun.security.x509.X509CertInfo;
+ import sun.security.x509.X500Name;
+-import sun.security.x509.CertAndKeyGen;
++import sun.security.tools.keytool.CertAndKeyGen;
+ import sun.security.x509.CertificateSubjectName;
+ import sun.security.x509.CertificateIssuerName;
+ import sun.security.x509.CertificateValidity;
+ import sun.security.x509.CertificateSerialNumber;
+ import sun.security.x509.CertificateAlgorithmId;
+ import sun.security.x509.X509Key;
+-import sun.security.pkcs.PKCS10;
+ 
+ /**
+  * This tool is run once on each CLOCKSS machine to generate
+diff --git a/tools/src/org/lockss/devtools/KeyStoresPhase2.java b/tools/src/org/lockss/devtools/KeyStoresPhase2.java
+index e1ffcee..d839153 100644
+--- a/tools/src/org/lockss/devtools/KeyStoresPhase2.java
++++ b/tools/src/org/lockss/devtools/KeyStoresPhase2.java
+@@ -46,14 +46,13 @@ import sun.security.x509.AlgorithmId;
+ import sun.security.x509.X509CertImpl;
+ import sun.security.x509.X509CertInfo;
+ import sun.security.x509.X500Name;
+-import sun.security.x509.CertAndKeyGen;
++import sun.security.tools.keytool.CertAndKeyGen;
+ import sun.security.x509.CertificateSubjectName;
+ import sun.security.x509.CertificateIssuerName;
+ import sun.security.x509.CertificateValidity;
+ import sun.security.x509.CertificateSerialNumber;
+ import sun.security.x509.CertificateAlgorithmId;
+ import sun.security.x509.X509Key;
+-import sun.security.pkcs.PKCS10;
+ 
+ /**
+  * This program is invoked with a list of domain names.  For each
+diff --git a/tools/src/org/lockss/keystore/BuildPermKeyStores.java b/tools/src/org/lockss/keystore/BuildPermKeyStores.java
+index 4809725..1aa8cee 100644
+--- a/tools/src/org/lockss/keystore/BuildPermKeyStores.java
++++ b/tools/src/org/lockss/keystore/BuildPermKeyStores.java
+@@ -45,14 +45,13 @@ import sun.security.x509.AlgorithmId;
+ import sun.security.x509.X509CertImpl;
+ import sun.security.x509.X509CertInfo;
+ import sun.security.x509.X500Name;
+-import sun.security.x509.CertAndKeyGen;
++import sun.security.tools.keytool.CertAndKeyGen;
+ import sun.security.x509.CertificateSubjectName;
+ import sun.security.x509.CertificateIssuerName;
+ import sun.security.x509.CertificateValidity;
+ import sun.security.x509.CertificateSerialNumber;
+ import sun.security.x509.CertificateAlgorithmId;
+ import sun.security.x509.X509Key;
+-import sun.security.pkcs.PKCS10;
+ 
+ /**
+  * A tool to build key stores for V3 over SSL support in CLOCKSS
+diff --git a/tools/src/org/lockss/keystore/BuildTempKeyStores.java b/tools/src/org/lockss/keystore/BuildTempKeyStores.java
+index f03622e..a4873f3 100644
+--- a/tools/src/org/lockss/keystore/BuildTempKeyStores.java
++++ b/tools/src/org/lockss/keystore/BuildTempKeyStores.java
+@@ -45,14 +45,13 @@ import sun.security.x509.AlgorithmId;
+ import sun.security.x509.X509CertImpl;
+ import sun.security.x509.X509CertInfo;
+ import sun.security.x509.X500Name;
+-import sun.security.x509.CertAndKeyGen;
++import sun.security.tools.keytool.CertAndKeyGen;
+ import sun.security.x509.CertificateSubjectName;
+ import sun.security.x509.CertificateIssuerName;
+ import sun.security.x509.CertificateValidity;
+ import sun.security.x509.CertificateSerialNumber;
+ import sun.security.x509.CertificateAlgorithmId;
+ import sun.security.x509.X509Key;
+-import sun.security.pkcs.PKCS10;
+ 
+ /**
+  * A tool to build key stores for V3 over SSL support in CLOCKSS
+diff --git a/tools/src/org/lockss/keystore/EditKeyStores.java b/tools/src/org/lockss/keystore/EditKeyStores.java
+index 2802979..6600aee 100644
+--- a/tools/src/org/lockss/keystore/EditKeyStores.java
++++ b/tools/src/org/lockss/keystore/EditKeyStores.java
+@@ -45,14 +45,13 @@ import sun.security.x509.AlgorithmId;
+ import sun.security.x509.X509CertImpl;
+ import sun.security.x509.X509CertInfo;
+ import sun.security.x509.X500Name;
+-import sun.security.x509.CertAndKeyGen;
++import sun.security.tools.keytool.CertAndKeyGen;
+ import sun.security.x509.CertificateSubjectName;
+ import sun.security.x509.CertificateIssuerName;
+ import sun.security.x509.CertificateValidity;
+ import sun.security.x509.CertificateSerialNumber;
+ import sun.security.x509.CertificateAlgorithmId;
+ import sun.security.x509.X509Key;
+-import sun.security.pkcs.PKCS10;
+ 
+ import org.lockss.util.*;
+ 
